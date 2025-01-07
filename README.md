@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/diogocarrola/diogocarrola/main/snowflakes.svg" alt="Snowflakes Animation">
+</p>
+
 ## Hi there 👋
 
 ### 🎯 Skills
