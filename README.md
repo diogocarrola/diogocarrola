@@ -1,5 +1,12 @@
 ## Hi there 👋
 
+### 🎯 Skills
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=bash,c,css,docker,figma,firebase,flutter,gcp,git,github,html,js,kubernetes,py,react" />
+  </a>
+</p>
+
 <!--
 **diogocarrola/diogocarrola** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
