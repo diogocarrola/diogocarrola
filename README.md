@@ -4,9 +4,9 @@
 
 ## Hello, World! 🌍
 
-I'm Diogo, a 22-year-old Self-taught Software Engineer from Portugal.
+I'm Diogo, a 22-year-old self-taught Software Developer from Portugal.
 
-### 🎯 Skills
+### 🎯 My Skills
 <p align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=bash,c,css,docker,figma,firebase,flutter,gcp,git,github,html,js,kubernetes,py,react" />
