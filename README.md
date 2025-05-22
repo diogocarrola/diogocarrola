@@ -18,6 +18,18 @@ I'm **Diogo**, a 22-year-old self-taught **Software Developer** from **Portugal*
   </a>
 </p>
 
+### 🔥 My GitHub Streak (made by me!)
+<p align="center">
+  <a href="https://github.com/diogocarrola/streakhub">
+    <img src="https://streakhub.onrender.com/widget/diogocarrola" alt="StreakHub Streak" />
+  </a>
+  <br>
+  <sub>
+    This streak widget is <b>originally built by me</b>!  
+    <a href="https://github.com/diogocarrola/streakhub">Get yours here</a> or try the <a href="https://diogocarrola.github.io/streakhub/">generator</a>.
+  </sub>
+</p>
+
 ### 🌟 Who I Am
 - 🏕️ A **Scout** at heart, always ready for new adventures and teamwork.
 - 💡 **Spontaneous** and curious, I thrive on solving problems and creating something out of nothing.
@@ -27,5 +39,5 @@ I'm **Diogo**, a 22-year-old self-taught **Software Developer** from **Portugal*
 If you need help with **developing**, **building** or **dreaming** a project, feel free to reach out! Let's collaborate and bring ideas to life.
 
 <p align="center">
-  <i>"What we have to learn to do, we learn by doing."</i> – Aristotle
+  <i>"What we have to learn to do, we learn by doing."</i> - Aristotle
 </p>
