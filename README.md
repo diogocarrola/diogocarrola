@@ -21,7 +21,7 @@ I'm **Diogo**, a 22-year-old self-taught **Software Developer** from **Portugal*
 ### 🔥 My GitHub Streak (made by me!)
 <p align="center">
   <a href="https://github.com/diogocarrola/streakhub">
-    <img src="https://streakhub.onrender.com/widget/diogocarrola" alt="StreakHub Streak" />
+    <img src="https://streakhub.onrender.com/widget/diogocarrola?v=20250528" alt="StreakHub Streak" />
   </a>
   <br>
   <sub>
