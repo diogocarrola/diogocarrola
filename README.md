@@ -9,7 +9,7 @@ I'm **Diogo**, a 22-year-old self-taught **Software Developer** from **Portugal*
 ### 🚀 What I'm Up To
 - 🌐 Building my **first Progressive Web App (PWA)** from scratch, designed to impact over **7,000 users**.
 - 📚 Constantly learning and exploring new technologies, especially in **JavaScript**, **AI** and **IoT**.
-- 🎤 Dreaming of doing **stand-up comedy** one day (because life is too short not to laugh!) and maybe working at **@Google** someday too. 😄
+- 🎤 Dreaming about being the **CEO of a big startup one day** (because hey, why not aim high? Plus, humor keeps me sane!) or maybe working at **@Google** someday too. 😄
 
 ### 🛠️ My Skills
 <p align="center">
@@ -34,6 +34,7 @@ I'm **Diogo**, a 22-year-old self-taught **Software Developer** from **Portugal*
 - 🏕️ A **Scout** at heart, always ready for new adventures and teamwork.
 - 💡 **Spontaneous** and curious, I thrive on solving problems and creating something out of nothing.
 - 🌍 Driven by the desire to **make a positive impact** through technology.
+- 🚧 One of two brothers who renovated our home ourselves - teamwork, sweat and lots of learning!
 
 ### 📬 Let's Connect!
 If you need help with **developing**, **building** or **dreaming** a project, feel free to reach out! Let's collaborate and bring ideas to life.
