@@ -30,6 +30,11 @@ I'm **Diogo**, a 22-year-old self-taught **Software Developer** from **Portugal*
   </sub>
 </p>
 
+### 🎮 My Contribution Pacman
+<p align="center">
+  <img src="assets/pacman.svg" alt="Pacman game showing my GitHub contributions">
+</p>
+
 ### 🌟 Who I Am
 - 🏕️ A **Scout** at heart, always ready for new adventures and teamwork.
 - 💡 **Spontaneous** and curious, I thrive on solving problems and creating something out of nothing.
