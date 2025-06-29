@@ -1,0 +1,36 @@
+name: Generate Pacman Contribution Game
+
+on:
+  schedule:
+    - cron: '0 12 * * *'  # Runs daily at noon UTC (better visibility than midnight)
+  workflow_dispatch:      # Allows manual triggering
+  push:
+    branches:
+      - main              # Runs on pushes to main branch
+
+jobs:
+  generate-pacman:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write    # Needed to commit the SVG back to repo
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      # Using the most reliable and customizable action
+      - name: Generate Pacman SVG
+        uses: liununu/generate-pacman-game-action@v1.1.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          svg_path: "assets/pacman-contributions.svg"      # Organized in assets folder
+          theme: "dark"                                    # Matches GitHub dark mode
+          pacman_color: "#FFD700"                          # Classic Pacman yellow
+          ghost_colors: "#FF0000,#00FF00,#0000FF,#FF00FF"  # Classic ghost colors
+          username: "diogocarrola"                         # Explicitly set your username
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "diogocarrola-bot"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/pacman-contributions.svg
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update Pacman contribution game" && git push)
