@@ -19,14 +19,11 @@ jobs:
       
       # Using the most reliable and customizable action
       - name: Generate Pacman SVG
-        uses: liununu/generate-pacman-game-action@v1.1.0
+        uses: abozanona/pacman-contribution-graph@main
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          svg_path: "assets/pacman-contributions.svg"      # Organized in assets folder
-          theme: "dark"                                    # Matches GitHub dark mode
-          pacman_color: "#FFD700"                          # Classic Pacman yellow
-          ghost_colors: "#FF0000,#00FF00,#0000FF,#FF00FF"  # Classic ghost colors
           username: "diogocarrola"                         # Explicitly set your username
+          output_file: "assets/pacman-contributions.svg"   # Organized in assets folder
+          theme: "auto"                                    # Automatically adapts to light/dark mode
 
       - name: Commit and push changes
         run: |
