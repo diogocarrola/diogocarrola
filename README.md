@@ -32,7 +32,11 @@ I'm **Diogo**, a 22-year-old self-taught **Software Developer** from **Portugal*
 
 ### 🕹️ My GitHub Contributions as Pacman
 <p align="center">
-  <img src="assets/pacman-contributions.svg" alt="Pacman showing my GitHub contributions" width="800">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/pacman-contributions-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/pacman-contributions.svg">
+    <img src="assets/pacman-contributions.svg" alt="Pacman showing my GitHub contributions" width="800">
+  </picture>
   <br>
   <sub>
     Generated with <a href="https://github.com/abozanona/pacman-contribution-graph">abozanona/pacman-contribution-graph</a>

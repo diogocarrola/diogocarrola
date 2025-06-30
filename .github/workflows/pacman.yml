@@ -17,18 +17,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      # Using the most reliable and customizable action
+      # Generate the SVG - outputs to dist/ folder
       - name: Generate Pacman SVG
         uses: abozanona/pacman-contribution-graph@main
         with:
           github_user_name: "diogocarrola"            # Your GitHub username
           github_token: ${{ secrets.GITHUB_TOKEN }}   # Token for authentication
       
-      # Move and rename the file
+      # Prepare assets folder and move files
       - name: Prepare assets
         run: |
           mkdir -p assets
-          mv pacman-contribution-graph.svg assets/pacman-contributions.svg
+          mv dist/pacman-contribution-graph.svg assets/pacman-contributions.svg
+          mv dist/pacman-contribution-graph-dark.svg assets/pacman-contributions-dark.svg
       
       # Verify generation
       - name: Verify SVG
@@ -39,10 +40,10 @@ jobs:
           fi
           echo "SVG generated successfully"
 
-      # Commit directly to main (simpler than pages)
+      # Commit changes
       - name: Commit and Push
         run: |
           git config --global user.name "diogocarrola-bot"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/pacman-contributions.svg
+          git add assets/
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update Pacman contribution game" && git push)
