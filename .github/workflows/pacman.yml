@@ -2,7 +2,7 @@ name: Generate Pacman Contribution Game
 
 on:
   schedule:
-    - cron: '0 12 * * *'  # Runs daily at noon UTC (better visibility than midnight)
+    - cron: "0 12 * * *"  # Runs daily at noon UTC (better visibility than midnight)
   workflow_dispatch:      # Allows manual triggering
   push:
     branches:
@@ -21,20 +21,26 @@ jobs:
       - name: Generate Pacman SVG
         uses: abozanona/pacman-contribution-graph@main
         with:
-          github_user_name: "diogocarrola"                 # Explicitly set your username
-          output_file: "assets/pacman-contributions.svg"   # Organized in assets folder
-          theme: "auto"                                    # Automatically adapts to light/dark mode
-
-      # Verify the SVG was generated
-      - name: Verify SVG generation
+          github_user_name: "diogocarrola"            # Your GitHub username
+          github_token: ${{ secrets.GITHUB_TOKEN }}   # Token for authentication
+      
+      # Move and rename the file
+      - name: Prepare assets
+        run: |
+          mkdir -p assets
+          mv pacman-contribution-graph.svg assets/pacman-contributions.svg
+      
+      # Verify generation
+      - name: Verify SVG
         run: |
           if [ ! -s "assets/pacman-contributions.svg" ]; then
-            echo "Error: SVG file was not generated or is empty!"
+            echo "Error: SVG file not generated"
             exit 1
           fi
-          echo " SVG generated successfully"
+          echo "SVG generated successfully"
 
-      - name: Commit and push changes
+      # Commit directly to main (simpler than pages)
+      - name: Commit and Push
         run: |
           git config --global user.name "diogocarrola-bot"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
