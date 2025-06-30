@@ -21,9 +21,18 @@ jobs:
       - name: Generate Pacman SVG
         uses: abozanona/pacman-contribution-graph@main
         with:
-          username: "diogocarrola"                         # Explicitly set your username
+          github_user_name: "diogocarrola"                 # Explicitly set your username
           output_file: "assets/pacman-contributions.svg"   # Organized in assets folder
           theme: "auto"                                    # Automatically adapts to light/dark mode
+
+      # Verify the SVG was generated
+      - name: Verify SVG generation
+        run: |
+          if [ ! -s "assets/pacman-contributions.svg" ]; then
+            echo "Error: SVG file was not generated or is empty!"
+            exit 1
+          fi
+          echo " SVG generated successfully"
 
       - name: Commit and push changes
         run: |
