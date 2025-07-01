@@ -30,12 +30,12 @@ I'm **Diogo**, a 22-year-old self-taught **Software Developer** from **Portugal*
   </sub>
 </p>
 
-### 🕹️ My GitHub Contributions as Pacman
+### 🕹️ My GitHub Contributions as PAC-MAN
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/pacman-contributions-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="assets/pacman-contributions.svg">
-    <img src="assets/pacman-contributions.svg" alt="Pacman showing my GitHub contributions" width="800">
+    <img src="assets/pacman-contributions.svg" alt="PAC-MAN showing my GitHub contributions" width="800">
   </picture>
   <br>
   <sub>
