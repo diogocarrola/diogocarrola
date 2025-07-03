@@ -10,29 +10,36 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Needed for contribution history
-          
+          fetch-depth: 0
+
+      - name: Clone Pacman Contribution Graph fork
+        run: |
+          git clone https://github.com/diogocarrola/pacman-contribution-graph.git
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
-          
+
       - name: Install dependencies
         run: npm install
-        
+        working-directory: pacman-contribution-graph
+
       - name: Build project
         run: npm run build
-        
+        working-directory: pacman-contribution-graph
+
       - name: Generate Pacman SVG
         run: |
-          node dist/index.js --username=${{ github.repository_owner }} --output=svg --theme=github > assets/pacman-contributions.svg
-          node dist/index.js --username=${{ github.repository_owner }} --output=svg --theme=github-dark > assets/pacman-contributions-dark.svg
-          
+          node dist/index.js --username=${{ github.repository_owner }} --output=svg --theme=github > ../assets/pacman-contributions.svg
+          node dist/index.js --username=${{ github.repository_owner }} --output=svg --theme=github-dark > ../assets/pacman-contributions-dark.svg
+        working-directory: pacman-contribution-graph
+
       - name: Commit and push changes
         run: |
           git config user.name "github-actions"
