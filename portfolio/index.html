@@ -5,26 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diogo's Portfolio</title>
     <link rel="stylesheet" href="assets/css/material.css">
+    <style>
+        body { background: #f8f9fa; font-family: 'Inter', sans-serif; }
+        .header { text-align: center; padding: 32px 0 24px 0; }
+        .nav-list { display: flex; justify-content: center; gap: 24px; list-style: none; padding: 0; }
+        .nav-list a { font-weight: 600; text-decoration: none; }
+        .about-card { background: white; border-radius: 8px; padding: 24px; margin: 24px auto; max-width: 600px; box-shadow: 0 1px 4px rgba(0,0,0,0.10);}
+    </style>
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>Welcome to Diogo's Portfolio</h1>
         <nav>
-            <ul>
-                <li><a href="pages/developer.html">Diogo Developer</a></li>
-                <li><a href="pages/scout.html">Diogo Scout</a></li>
-                <li><a href="pages/builder.html">Diogo Builder</a></li>
+            <ul class="nav-list">
+                <li><a href="pages/developer.html" style="color:#4285F4;">Developer</a></li>
+                <li><a href="pages/scout.html" style="color:#EA4335;">Scout</a></li>
+                <li><a href="pages/builder.html" style="color:#34A853;">Builder</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <h2>About Me</h2>
-            <p>Explore my journey as a Developer, Scout and Builder.</p>
+        <section class="about-card">
+            <h2>Hello, I'm Diogo!</h2>
+            <p>
+                Explore my journey as a <span style="color:#4285F4;font-weight:600;">Developer</span>, <span style="color:#EA4335;font-weight:600;">Scout</span>, and <span style="color:#34A853;font-weight:600;">Builder</span>.
+                <br>
+                I believe in learning by doing, teamwork and making a positive impact whether through code, community or creativity.
+            </p>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Diogo Carrola. All rights reserved.</p>
+        <p style="text-align:center; color:#5F6368; font-size:0.95em;">&copy; 2025 Diogo Carrola. All rights reserved.</p>
     </footer>
     <script src="assets/js/material.js"></script>
 </body>
