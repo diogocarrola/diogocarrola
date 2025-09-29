@@ -229,3 +229,300 @@ footer p {
     opacity: 0.9;
   }
 }
+
+/* Top-right controls */
+.header-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Enhanced theme toggle */
+.theme-toggle {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: var(--on-primary-color);
+    cursor: pointer;
+    font-size: 1.3em;
+    padding: 10px;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* Language switcher */
+.language-switcher {
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 4px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: var(--on-primary-color);
+    padding: 6px 12px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.lang-btn.active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.lang-btn:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Profile image animations */
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Home Page Profile */
+.home-profile {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    border: 4px solid var(--on-primary-color);
+    position: relative;
+    animation: gentle-pulse 4s ease-in-out infinite;
+}
+
+.home-profile:hover {
+    animation: gentle-pulse 2s ease-in-out infinite;
+}
+
+.home-profile:hover .profile-img {
+    transform: scale(1.05);
+}
+
+@keyframes gentle-pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+    }
+}
+
+/* Button Styles for all pages */
+.button-group {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #4285F4;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #3367D6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #4285F4;
+    border-color: #4285F4;
+}
+
+.btn-secondary:hover {
+    background: #4285F4;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* LinkedIn specific button */
+.btn-linkedin {
+    background: #0077B5;
+    color: white;
+}
+
+.btn-linkedin:hover {
+    background: #005885;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 119, 181, 0.3);
+}
+
+/* Page-specific themes */
+
+/* Home Page Theme */
+.page-home {
+    --primary-color: #1976D2;
+    --background-color: #E3F2FD;
+    --surface-color: #FFFFFF;
+    --on-primary-color: #FFFFFF;
+    --on-background-color: #0D47A1;
+    --on-surface-color: #0D47A1;
+    --shadow-color: rgba(25, 118, 210, 0.1);
+    --text-secondary: #546E7A;
+}
+
+.page-home[data-theme="dark"] {
+    --primary-color: #90CAF9;
+    --background-color: #002447;
+    --surface-color: #1E3A5F;
+    --on-primary-color: #002447;
+    --on-background-color: #E3F2FD;
+    --on-surface-color: #E3F2FD;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --text-secondary: #B0BEC5;
+}
+
+/* Developer Page Theme */
+.page-developer {
+    --primary-color: #000000;
+    --background-color: #FFFFFF;
+    --surface-color: #F5F5F5;
+    --on-primary-color: #FFFFFF;
+    --on-background-color: #000000;
+    --on-surface-color: #000000;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --text-secondary: #757575;
+}
+
+.page-developer[data-theme="dark"] {
+    --primary-color: #FFFFFF;
+    --background-color: #000000;
+    --surface-color: #1C1C1C;
+    --on-primary-color: #000000;
+    --on-background-color: #FFFFFF;
+    --on-surface-color: #FFFFFF;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --text-secondary: #BDBDBD;
+}
+
+/* Scout Page Theme */
+.page-scout {
+    --primary-color: #D32F2F;
+    --background-color: #FFEBEE;
+    --surface-color: #FFFFFF;
+    --on-primary-color: #FFFFFF;
+    --on-background-color: #B71C1C;
+    --on-surface-color: #B71C1C;
+    --shadow-color: rgba(211, 47, 47, 0.1);
+    --text-secondary: #E57373;
+}
+
+.page-scout[data-theme="dark"] {
+    --primary-color: #EF5350;
+    --background-color: #1A0D0D;
+    --surface-color: #2D1818;
+    --on-primary-color: #FFFFFF;
+    --on-background-color: #FFCDD2;
+    --on-surface-color: #FFCDD2;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --text-secondary: #EF9A9A;
+}
+
+/* Builder Page Theme */
+.page-builder {
+    --primary-color: #2E7D32;
+    --background-color: #E8F5E8;
+    --surface-color: #FFFFFF;
+    --on-primary-color: #FFFFFF;
+    --on-background-color: #1B5E20;
+    --on-surface-color: #1B5E20;
+    --shadow-color: rgba(46, 125, 50, 0.1);
+    --text-secondary: #66BB6A;
+}
+
+.page-builder[data-theme="dark"] {
+    --primary-color: #66BB6A;
+    --background-color: #0D1B0D;
+    --surface-color: #1B2E1B;
+    --on-primary-color: #FFFFFF;
+    --on-background-color: #C8E6C9;
+    --on-surface-color: #C8E6C9;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --text-secondary: #81C784;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-controls {
+        top: 15px;
+        right: 15px;
+        gap: 8px;
+    }
+
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+
+    .home-profile {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-controls {
+        top: 10px;
+        right: 10px;
+    }
+
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1em;
+    }
+
+    .lang-btn {
+        padding: 4px 8px;
+        font-size: 0.8em;
+    }
+}
