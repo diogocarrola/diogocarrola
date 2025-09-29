@@ -1,59 +1,93 @@
+:root {
+  /* Light theme variables */
+  --primary-color: #6200ea;
+  --background-color: #f5f5f5;
+  --surface-color: #ffffff;
+  --on-primary-color: #ffffff;
+  --on-background-color: #000000;
+  --on-surface-color: #000000;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  /* Dark theme variables */
+  --primary-color: #bb86fc;
+  --background-color: #121212;
+  --surface-color: #1e1e1e;
+  --on-primary-color: #000000;
+  --on-background-color: #ffffff;
+  --on-surface-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--on-background-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 header {
-    background-color: #6200ea;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background-color: var(--primary-color);
+  color: var(--on-primary-color);
+  padding: 20px;
+  text-align: center;
 }
 
 nav {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+  color: var(--on-primary-color);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 section {
-    padding: 20px;
-    margin: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--shadow-color);
 }
 
 h1, h2 {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 h1 {
-    font-size: 2.5em;
+  font-size: 2.5em;
 }
 
 h2 {
-    font-size: 1.5em;
-    color: #6200ea;
+  font-size: 1.5em;
+  color: var(--primary-color);
 }
 
 footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #6200ea;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: var(--on-primary-color);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Dark mode toggle button */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--on-primary-color);
+  cursor: pointer;
+  font-size: 1.5em;
+  padding: 5px 10px;
 }

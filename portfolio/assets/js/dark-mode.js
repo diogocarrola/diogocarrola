@@ -1,0 +1,32 @@
+class DarkMode {
+  constructor() {
+    this.toggleButton = document.querySelector('.theme-toggle');
+    this.currentTheme = localStorage.getItem('theme') || 'light';
+    this.init();
+  }
+
+  init() {
+    this.setTheme(this.currentTheme);
+    this.toggleButton.addEventListener('click', () => this.toggleTheme());
+  }
+
+  setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    this.updateButton(theme);
+  }
+
+  toggleTheme() {
+    this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+    this.setTheme(this.currentTheme);
+  }
+
+  updateButton(theme) {
+    this.toggleButton.textContent = theme === 'light' ? '🌙' : '☀️';
+  }
+}
+
+// Initialize dark mode when the DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  new DarkMode();
+});
