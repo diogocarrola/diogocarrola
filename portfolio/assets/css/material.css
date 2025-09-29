@@ -103,3 +103,79 @@ footer p {
   font-size: 1.5em;
   padding: 5px 10px;
 }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.compass-container {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  border-radius: 50%;
+  border: 4px solid var(--on-primary-color);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  animation: rotate 20s linear infinite;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.compass-container:hover {
+  animation-play-state: paused;
+  transform: scale(1.05);
+}
+
+.compass {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--primary-color), #bb86fc);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.compass::before {
+  content: "N";
+  position: absolute;
+  top: 10px;
+  color: var(--on-primary-color);
+  font-weight: bold;
+}
+
+.compass::after {
+  content: "↑";
+  position: absolute;
+  font-size: 2em;
+  color: var(--on-primary-color);
+}
+
+/* Enhanced slide-in animation */
+.slide-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skill chips with hover effects */
+.skill-chip {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

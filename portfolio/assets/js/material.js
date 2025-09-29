@@ -12,4 +12,22 @@ document.addEventListener('DOMContentLoaded', function() {
             targetElement.scrollIntoView({ behavior: 'smooth' });
         });
     });
+
+    // Scroll animation for slide-in elements
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all slide-in elements
+    const slideInElements = document.querySelectorAll('.slide-in');
+    slideInElements.forEach(el => observer.observe(el));
 });
