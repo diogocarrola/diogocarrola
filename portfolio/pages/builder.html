@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../assets/css/material.css">
     <style>
         body { background: #f8f9fa; font-family: 'Inter', sans-serif; }
-        .header { background: #34A853; color: white; padding: 32px 0 24px 0; text-align: center; }
+        .header { background: #34A853; color: white; padding: 32px 0 24px 0; text-align: center; position: relative;}
         .material-card { background: white; border-radius: 8px; padding: 24px; margin: 24px auto; max-width: 600px; box-shadow: 0 1px 4px rgba(0,0,0,0.10);}
         .skills-list { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;}
         .skill-chip { background: #E6F4EA; color: #34A853; padding: 6px 14px; border-radius: 16px; font-size: 0.95em;}
@@ -23,9 +23,16 @@
 </head>
 <body class="page-builder">
     <header class="header">
+        <!-- Top-right controls -->
+        <div class="header-controls">
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="pt">PT</button>
+            </div>
+            <button class="theme-toggle">🌙</button>
+        </div>
         <h1><span class="material-icons">build</span>Diogo Builder</h1>
         <p>DIY & Creative Problem-Solver</p>
-        <button class="theme-toggle">🌙</button>
     </header>
     <main>
         <section class="material-card">
@@ -78,6 +85,7 @@
         </nav>
         <p style="text-align:center; color:#5F6368; font-size:0.95em;">&copy; 2025 Diogo Carrola</p>
     </footer>
+    <script src="../assets/js/language-switcher.js"></script>
     <script src="../assets/js/dark-mode.js"></script>
 </body>
 </html>

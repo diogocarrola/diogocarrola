@@ -19,6 +19,7 @@
             color: white;
             padding: 32px 0 24px 0;
             text-align: center;
+            position: relative;
         }
         .material-card {
             background: white;
@@ -60,7 +61,14 @@
 </head>
 <body class="page-developer">
     <header class="header">
-        <button class="theme-toggle">🌙</button>
+        <!-- Top-right controls -->
+        <div class="header-controls">
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="pt">PT</button>
+            </div>
+            <button class="theme-toggle">🌙</button>
+        </div>
     </header>
 
     <section class="hero-section">
@@ -133,6 +141,7 @@
         </nav>
         <p style="text-align:center; color:#5F6368; font-size:0.95em;">&copy; 2025 Diogo Carrola</p>
     </footer>
+    <script src="../assets/js/language-switcher.js"></script>
     <script src="../assets/js/dark-mode.js"></script>
 </body>
 </html>

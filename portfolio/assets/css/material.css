@@ -456,14 +456,14 @@ footer p {
 }
 
 .page-scout[data-theme="dark"] {
-    --primary-color: #EF5350;
-    --background-color: #1A0D0D;
-    --surface-color: #2D1818;
+    --primary-color: #1976D2;
+    --background-color: #0D47A1;
+    --surface-color: #1565C0;
     --on-primary-color: #FFFFFF;
-    --on-background-color: #FFCDD2;
-    --on-surface-color: #FFCDD2;
+    --on-background-color: #BBDEFB;
+    --on-surface-color: #BBDEFB;
     --shadow-color: rgba(0, 0, 0, 0.3);
-    --text-secondary: #EF9A9A;
+    --text-secondary: #64B5F6;
 }
 
 /* Builder Page Theme */
@@ -479,14 +479,14 @@ footer p {
 }
 
 .page-builder[data-theme="dark"] {
-    --primary-color: #66BB6A;
-    --background-color: #0D1B0D;
-    --surface-color: #1B2E1B;
+    --primary-color: #7B1FA2;
+    --background-color: #4A148C;
+    --surface-color: #6A1B9A;
     --on-primary-color: #FFFFFF;
-    --on-background-color: #C8E6C9;
-    --on-surface-color: #C8E6C9;
+    --on-background-color: #E1BEE7;
+    --on-surface-color: #E1BEE7;
     --shadow-color: rgba(0, 0, 0, 0.3);
-    --text-secondary: #81C784;
+    --text-secondary: #BA68C8;
 }
 
 /* Responsive adjustments */
