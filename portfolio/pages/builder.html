@@ -5,44 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diogo Carrola - Builder</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/material.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/themes.css">
     <style>
-        body { background: #f8f9fa; font-family: 'Inter', sans-serif; }
-        .header { background: #34A853; color: white; padding: 32px 0 24px 0; text-align: center; position: relative;}
-        .material-card { background: white; border-radius: 8px; padding: 24px; margin: 24px auto; max-width: 600px; box-shadow: 0 1px 4px rgba(0,0,0,0.10);}
-        .skills-list { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;}
-        .skill-chip { background: #E6F4EA; color: #34A853; padding: 6px 14px; border-radius: 16px; font-size: 0.95em;}
-        .nav-footer { display: flex; justify-content: center; gap: 24px; margin: 40px 0 16px 0;}
-        .nav-footer a { color: #34A853; text-decoration: none; font-weight: 600;}
-        .material-icons { vertical-align: middle; margin-right: 6px;}
-        .story-section { line-height: 1.6; }
+        .construction-dust {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            pointer-events: none;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .dust-particle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, #8B4513, #A0522D, #CD853F);
+            opacity: 0;
+        }
+        
+        .content-section {
+            padding: var(--space-xl);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .nav-footer {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-lg);
+            margin: var(--space-xxl) 0 var(--space-lg);
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--border-radius-md);
+            transition: all var(--transition-fast);
+        }
+        
+        .footer-link:hover,
+        .footer-link.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .story-section { 
+            line-height: 1.6; 
+        }
+        
+        .story-section ul {
+            margin: var(--space-md) 0;
+            padding-left: var(--space-lg);
+        }
+        
+        .story-section li {
+            margin-bottom: var(--space-sm);
+        }
+        
+        blockquote {
+            background: var(--surface-color);
+            padding: var(--space-lg);
+            border-radius: var(--border-radius-md);
+            margin: var(--space-lg) 0;
+            border-left: 4px solid var(--primary-color);
+            font-style: italic;
+        }
+        
+        /* Profile frame for builder page */
+        .profile-frame {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            padding: 8px;
+            position: relative;
+            margin: 0 auto;
+            box-shadow: var(--shadow-xl);
+            border: 4px solid var(--on-primary-color);
+            background: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .profile-frame {
+                width: 180px;
+                height: 180px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .profile-frame {
+                width: 150px;
+                height: 150px;
+            }
+        }
     </style>
 </head>
-<body class="page-builder">
-    <header class="header">
-        <!-- Top-right controls -->
-        <div class="header-controls">
-            <div class="language-switcher">
-                <button class="lang-btn active" data-lang="en">EN</button>
-                <button class="lang-btn" data-lang="pt">PT</button>
-            </div>
-            <button class="theme-toggle">🌙</button>
+<body class="page-builder" data-theme="light">
+    <!-- Header Controls -->
+    <div class="header-controls">
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="pt">PT</button>
         </div>
-        <h1><span class="material-icons">build</span>Diogo Builder</h1>
-        <p>DIY & Creative Problem-Solver</p>
-    </header>
-    <main>
-        <section class="material-card">
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+    <!-- Main Hero Section -->
+    <main class="hero-section">
+        <!-- Profile with Construction Theme -->
+        <div class="profile-container">
+            <div class="profile-frame builder-theme">
+                <img src="../assets/images/profile-builder.jpg" alt="Diogo Builder" class="profile-image">
+                <div class="construction-dust" id="constructionDust"></div>
+            </div>
+        </div>
+        
+        <!-- Hero Content - Keeping your exact text -->
+        <div class="hero-content">
+            <h1 class="slide-in-from-top"><span class="material-icons">build</span>Diogo Builder</h1>
+            <p class="slide-in-from-bottom">DIY & Creative Problem-Solver</p>
+        </div>
+    </main>
+
+    <!-- Content Sections - Keeping your exact content -->
+    <section class="content-section">
+        <div class="material-card slide-in">
             <h2>Hands-On Creator 🛠️</h2>
             <p>
                 I believe in learning by doing. Whether it's code or construction, every project is a chance to grow through hands-on experience.
             </p>
-        </section>
+        </div>
 
-        <section class="material-card story-section">
+        <div class="material-card slide-in story-section">
             <h3><span class="material-icons">home_repair_service</span>The Home Renovation Challenge</h3>
             <p>Together with my brother, we took on the challenge of completely renovating a house with zero prior construction experience. Our goal: transform an old space into a modern, functional home using only our determination and willingness to learn by doing.</p>
             
@@ -54,17 +156,17 @@
             </ul>
             
             <p>Every skill was acquired through methodical research (YouTube mostly) and plenty of trial and error.</p>
-        </section>
+        </div>
 
-        <section class="material-card">
+        <div class="material-card slide-in">
             <h3><span class="material-icons">psychology</span>The Real Result</h3>
             <p>Beyond the renovated house, the greatest outcome was developing unshakable confidence in solving complex problems. This project proved that with <strong>teamwork, sweat, and endless curiosity</strong>, no obstacle is too big to overcome.</p>
             <blockquote>
                 "We didn't know it was impossible, so we did it anyway."
             </blockquote>
-        </section>
+        </div>
 
-        <section class="material-card">
+        <div class="material-card slide-in">
             <h3><span class="material-icons">architecture</span>Skills Gained</h3>
             <div class="skills-list">
                 <span class="skill-chip">Project Management</span>
@@ -74,18 +176,40 @@
                 <span class="skill-chip">Budget Planning</span>
                 <span class="skill-chip">Creative Solutions</span>
             </div>
-        </section>
-    </main>
-    <footer>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="main-footer">
         <nav class="nav-footer">
-            <a href="../index.html" style="color:#4285F4;">Home</a>
-            <a href="developer.html" style="color:#4285F4;">Developer</a>
-            <a href="scout.html" style="color:#EA4335;">Scout</a>
-            <a href="builder.html">Builder</a>
+            <a href="../index.html" class="footer-link">Home</a>
+            <a href="developer.html" class="footer-link">Developer</a>
+            <a href="scout.html" class="footer-link">Scout</a>
+            <a href="builder.html" class="footer-link active">Builder</a>
         </nav>
-        <p style="text-align:center; color:#5F6368; font-size:0.95em;">&copy; 2025 Diogo Carrola</p>
+        <p class="copyright">&copy; 2025 Diogo Carrola</p>
     </footer>
-    <script src="../assets/js/language-switcher.js"></script>
+    <script src="../assets/js/main.js"></script>
     <script src="../assets/js/dark-mode.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    <script>
+        // Construction dust animation for builder page
+        document.addEventListener('DOMContentLoaded', function() {
+            const dustContainer = document.getElementById('constructionDust');
+            if (dustContainer) {
+                // Create dust particles
+                for (let i = 0; i < 20; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'dust-particle';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.top = Math.random() * 100 + '%';
+                    particle.style.width = (Math.random() * 4 + 2) + 'px';
+                    particle.style.height = particle.style.width;
+                    particle.style.animationDelay = Math.random() * 3 + 's';
+                    particle.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                    dustContainer.appendChild(particle);
+                }
+            }
+        });
+    </script>
 </body>
 </html>
