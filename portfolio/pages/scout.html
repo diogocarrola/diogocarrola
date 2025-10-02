@@ -5,66 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diogo Carrola - Scout</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/material.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/themes.css">
     <style>
-        body { background: #f8f9fa; font-family: 'Inter', sans-serif; }
-        .header { background: #EA4335; color: white; padding: 32px 0 24px 0; text-align: center; position: relative;}
-        .material-card { background: white; border-radius: 8px; padding: 24px; margin: 24px auto; max-width: 600px; box-shadow: 0 1px 4px rgba(0,0,0,0.10);}
-        .skills-list { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;}
-        .skill-chip { background: #FCE8E6; color: #EA4335; padding: 6px 14px; border-radius: 16px; font-size: 0.95em;}
-        .nav-footer { display: flex; justify-content: center; gap: 24px; margin: 40px 0 16px 0;}
-        .nav-footer a { color: #EA4335; text-decoration: none; font-weight: 600;}
-        .material-icons { vertical-align: middle; margin-right: 6px;}
+        .phoenix-fire {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            pointer-events: none;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .fire-particle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ff6b35, #ff4757, #ff3838);
+            opacity: 0;
+        }
+        
+        .content-section {
+            padding: var(--space-xl);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .nav-footer {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-lg);
+            margin: var(--space-xxl) 0 var(--space-lg);
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--border-radius-md);
+            transition: all var(--transition-fast);
+        }
+        
+        .footer-link:hover,
+        .footer-link.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .hero-intro {
+            font-size: var(--font-size-lg);
+            line-height: 1.6;
+            max-width: 600px;
+            margin: var(--space-md) auto;
+            color: var(--text-secondary);
+        }
+        
+        /* Keep your existing phoenix styles but make responsive */
+        .phoenix-container {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            margin: 0 auto var(--space-lg);
+        }
+        
+        @media (max-width: 768px) {
+            .phoenix-container {
+                width: 120px;
+                height: 120px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .phoenix-container {
+                width: 100px;
+                height: 100px;
+            }
+        }
     </style>
 </head>
-<body class="page-scout">
-    <header class="header">
-        <!-- Top-right controls -->
-        <div class="header-controls">
-            <div class="language-switcher">
-                <button class="lang-btn active" data-lang="en">EN</button>
-                <button class="lang-btn" data-lang="pt">PT</button>
-            </div>
-            <button class="theme-toggle">🌙</button>
+<body class="page-scout" data-theme="light">
+    <!-- Header Controls -->
+    <div class="header-controls">
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="pt">PT</button>
         </div>
-        <h1><span class="material-icons">groups</span>Diogo Scout</h1>
-        <p>Leadership & Adventure</p>
-    </header>
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
 
-    <section class="hero">
-        <div class="phoenix-container">
-            <div class="phoenix">
-                <div class="fire"></div>
-                <div class="fire"></div>
-                <div class="fire"></div>
+    <!-- Main Hero Section -->
+    <main class="hero-section">
+        <!-- Profile with Phoenix Animation -->
+        <div class="profile-container">
+            <div class="phoenix-container">
+                <div class="phoenix">
+                    <div class="fire"></div>
+                    <div class="fire"></div>
+                    <div class="fire"></div>
+                </div>
             </div>
         </div>
+        
+        <!-- Hero Content - Keeping your exact text -->
         <div class="hero-content">
-            <h1><span class="material-icons">groups</span>Diogo Scout</h1>
-            <p>Leadership & Adventure</p>
+            <h1 class="slide-in-from-top"><span class="material-icons">groups</span>Diogo Scout</h1>
+            <p class="slide-in-from-bottom">Leadership & Adventure</p>
             <p class="hero-intro">Scouting has shaped who I am - always ready for new adventures, teamwork and making a difference in my community.</p>
         </div>
-    </section>
+    </main>
 
-    <main>
-        <section class="material-card slide-in">
+    <!-- Content Sections - Keeping your exact content -->
+    <section class="content-section">
+        <div class="material-card slide-in">
             <h2>Scout at Heart 🏕️</h2>
             <p>
                 Scouting has shaped who I am - always ready for new adventures, teamwork and making a difference in my community.
             </p>
-        </section>
-        <section class="material-card slide-in">
+        </div>
+        <div class="material-card slide-in">
             <h3><span class="material-icons">leaderboard</span>National Coordinator Experience</h3>
             <ul>
                 <li>Led a team of 10+ people in national projects</li>
                 <li>Planned events for 100+ participants</li>
                 <li>Managed logistics and solved problems in real time</li>
             </ul>
-        </section>
-        <section class="material-card slide-in">
+        </div>
+        <div class="material-card slide-in">
             <h3><span class="material-icons">psychology</span>Transferable Skills</h3>
             <div class="skills-list">
                 <span class="skill-chip">Leadership</span>
@@ -74,18 +147,20 @@
                 <span class="skill-chip">Service</span>
                 <span class="skill-chip">Problem Solving</span>
             </div>
-        </section>
-    </main>
-    <footer>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="main-footer">
         <nav class="nav-footer">
-            <a href="../index.html" style="color:#4285F4;">Home</a>
-            <a href="developer.html" style="color:#4285F4;">Developer</a>
-            <a href="scout.html">Scout</a>
-            <a href="builder.html" style="color:#34A853;">Builder</a>
+            <a href="../index.html" class="footer-link">Home</a>
+            <a href="developer.html" class="footer-link">Developer</a>
+            <a href="scout.html" class="footer-link active">Scout</a>
+            <a href="builder.html" class="footer-link">Builder</a>
         </nav>
-        <p style="text-align:center; color:#5F6368; font-size:0.95em;">&copy; 2025 Diogo Carrola</p>
+        <p class="copyright">&copy; 2025 Diogo Carrola</p>
     </footer>
-    <script src="../assets/js/language-switcher.js"></script>
+    <script src="../assets/js/main.js"></script>
     <script src="../assets/js/dark-mode.js"></script>
+    <script src="../assets/js/animations.js"></script>
 </body>
 </html>
