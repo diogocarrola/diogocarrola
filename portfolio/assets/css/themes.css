@@ -43,12 +43,16 @@
     --primary-color: #1a365d;    /* Dark blue */
     --secondary-color: #2d3748;  /* Slightly lighter dark blue */
     --on-primary-color: #FFFFFF;
+    --on-background-color: #1a365d;
+    --on-surface-color: #1a365d;
 }
 
 .page-developer[data-theme="dark"] {
     --primary-color: #90cdf4;    /* Light blue for dark mode */
     --secondary-color: #63b3ed;
     --on-primary-color: #1a202c;
+    --on-background-color: #E3F2FD;
+    --on-surface-color: #E3F2FD;
 }
 
 /* Scout Page Theme */
@@ -56,12 +60,16 @@
     --primary-color: #EA4335;
     --secondary-color: #FBBC04;
     --on-primary-color: #FFFFFF;
+    --on-background-color: #EA4335;
+    --on-surface-color: #EA4335;
 }
 
 .page-scout[data-theme="dark"] {
-    --primary-color: #EA4335;
+    --primary-color: #f28b82;  /* Light red for dark mode */
     --secondary-color: #FBBC04;
     --on-primary-color: #FFFFFF;
+    --on-background-color: #f28b82;
+    --on-surface-color: #f28b82;
 }
 
 /* Builder Page Theme - Warm Golden Yellow */
@@ -69,12 +77,16 @@
     --primary-color: #d69e2e;    /* Warm golden yellow */
     --secondary-color: #b7791f;  /* Darker golden brown */
     --on-primary-color: #FFFFFF;
+    --on-background-color: #d69e2e;
+    --on-surface-color: #d69e2e;
 }
 
 .page-builder[data-theme="dark"] {
-    --primary-color: #ecc94b;    /* Brighter yellow for dark mode */
+    --primary-color: #faf089;   /* Light golden yellow for dark mode */
     --secondary-color: #d69e2e;
     --on-primary-color: #1a202c;
+    --on-background-color: #faf089;
+    --on-surface-color: #faf089;
 }
 
 /* Card Specific Styles */
