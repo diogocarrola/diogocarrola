@@ -47,7 +47,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Add smooth transitions for theme changes */
 :root {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -56,6 +55,7 @@ body {
     font-family: var(--font-family);
     line-height: 1.6;
     min-height: 100vh;
+    background-color: var(--background-color);
     transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
@@ -94,39 +94,54 @@ body {
     background: rgba(255, 255, 255, 0.3);
 }
 
-/* Theme Toggle */
+/* Theme Toggle Switch */
 .theme-toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
     background: rgba(255, 255, 255, 0.2);
     border: none;
-    color: var(--on-primary-color);
+    border-radius: 30px;
     cursor: pointer;
-    font-size: 1.3em;
-    padding: 10px;
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: all var(--transition-normal);
     backdrop-filter: blur(10px);
 }
 
+.theme-toggle::before {
+    content: '🌙';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    background: white;
+    transition: all var(--transition-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+[data-theme="dark"] .theme-toggle::before {
+    transform: translateX(30px);
+    content: '☀️';
+}
+
 .theme-toggle:hover {
     background: rgba(255, 255, 255, 0.3);
-    transform: scale(1.1);
 }
 
 /* Hero Section */
 .hero-section {
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: var(--space-xl);
-    background: var(--background-color);
+    padding: var(--space-xxl) var(--space-lg);
+    position: relative;
 }
 
 .profile-container {
@@ -134,14 +149,14 @@ body {
 }
 
 .profile-frame {
-    width: 220px;
-    height: 220px;
+    width: 280px;
+    height: 280px;
     border-radius: var(--border-radius-round);
     padding: 8px;
     position: relative;
     margin: 0 auto;
     box-shadow: var(--shadow-xl);
-    border: 4px solid var(--on-primary-color);
+    border: 4px solid var(--primary-color);
     animation: none;
 }
 
@@ -157,15 +172,7 @@ body {
     transform: scale(1.05);
 }
 
-.profile-frame:hover {
-    animation: none;
-}
-
-
-
-
-
-/* ===== IMPROVED CONTENT SECTIONS ===== */
+/* Content sections */
 .content-section {
     padding: var(--space-xl) var(--space-lg);
     max-width: 800px;
@@ -187,7 +194,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Improved typography spacing */
 .material-card h2 {
     margin-bottom: var(--space-md);
     font-size: var(--font-size-xl);
@@ -232,7 +238,7 @@ body {
     color: var(--primary-color);
 }
 
-/* Improved skills list */
+/* Skills list */
 .skills-list {
     display: flex;
     flex-wrap: wrap;
@@ -255,45 +261,28 @@ body {
     box-shadow: var(--shadow-sm);
 }
 
-/* ===== IMPROVED HERO SECTION ===== */
-.hero-section {
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: var(--space-xxl) var(--space-lg);
-    position: relative;
+/* Highlighted text styles */
+.developer-text {
+    color: #1a365d;
+    font-weight: 700;
 }
 
-.profile-container {
-    margin-bottom: var(--space-xl);
+.scout-text {
+    color: #EA4335;
+    font-weight: 700;
 }
 
-/* ===== FIX PROFILE IMAGE DISPLAY ===== */
-.profile-frame {
-    width: 200px;
-    height: 200px;
-    border-radius: var(--border-radius-round);
-    padding: 6px;
-    position: relative;
-    margin: 0 auto;
-    box-shadow: var(--shadow-xl);
-    border: 3px solid var(--on-primary-color);
-    background: var(--primary-color);
-    overflow: hidden;
+.builder-text {
+    color: #d69e2e;
+    font-weight: 700;
 }
 
-.profile-image {
-    width: 100%;
-    height: 100%;
-    border-radius: var(--border-radius-round);
-    object-fit: cover;
-    display: block;
-}
+/* For dark mode support */
+[data-theme="dark"] .developer-text { color: #90cdf4; }
+[data-theme="dark"] .scout-text { color: #f28b82; }
+[data-theme="dark"] .builder-text { color: #faf089; }
 
-/* ===== PAGE-SPECIFIC ANIMATION CONTAINERS ===== */
+/* Page-specific animation containers */
 .binary-rain,
 .phoenix-fire,
 .construction-dust {
@@ -308,7 +297,7 @@ body {
     z-index: 2;
 }
 
-/* ===== IMPROVED FOOTER ===== */
+/* Footer */
 .main-footer {
     text-align: center;
     padding: var(--space-xl) var(--space-lg);
@@ -339,7 +328,7 @@ body {
     color: white;
 }
 
-/* ===== STORY SECTION IMPROVEMENTS ===== */
+/* Story Section */
 .story-section {
     line-height: 1.6;
 }
@@ -545,26 +534,16 @@ blockquote {
     font-size: var(--font-size-sm);
 }
 
-/* ===== PROFILE FRAME ANIMATION ===== */
-.profile-frame {
-    animation: none;
-}
-
-.profile-frame:hover {
-    animation: none;
-}
-
-/* ===== SMOOTH SCROLL BEHAVIOR ===== */
+/* Smooth scroll behavior */
 html {
     scroll-behavior: smooth;
 }
 
-/* ===== LOADING STATES ===== */
 body.loading * {
     transition: none !important;
 }
 
-/* ===== IMPROVED LIST STYLING ===== */
+/* List styling */
 .material-card ul {
     list-style: none;
     padding-left: 0;
@@ -583,12 +562,11 @@ body.loading * {
     left: 0;
 }
 
-/* ===== BETTER BUTTON SPACING ===== */
 .btn {
     margin-top: var(--space-sm);
 }
 
-/* ===== IMPROVED BLOCKQUOTE ===== */
+/* Blockquote styling */
 blockquote {
     position: relative;
 }
@@ -604,7 +582,7 @@ blockquote::before {
     line-height: 1;
 }
 
-/* ===== EXISTING ANIMATIONS ===== */
+/* Animations */
 .slide-in {
     opacity: 0;
     transform: translateY(30px);
@@ -668,7 +646,7 @@ blockquote::before {
     }
 }
 
-/* ===== RESPONSIVE IMPROVEMENTS ===== */
+/* Responsive improvements */
 @media (max-width: 768px) {
     .hero-section {
         min-height: 60vh;
@@ -693,8 +671,8 @@ blockquote::before {
     }
 
     .profile-frame {
-        width: 160px;
-        height: 160px;
+        width: 280px;
+        height: 280px;
     }
 
     .nav-footer {
@@ -742,8 +720,8 @@ blockquote::before {
     }
 
     .profile-frame {
-        width: 140px;
-        height: 140px;
+        width: 280px;
+        height: 280px;
     }
 
     .nav-footer {
