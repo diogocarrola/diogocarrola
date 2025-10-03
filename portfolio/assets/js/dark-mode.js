@@ -7,11 +7,14 @@ class DarkMode {
 
   init() {
     this.setTheme(this.currentTheme);
-    this.toggleButton.addEventListener('click', () => this.toggleTheme());
+    if (this.toggleButton) {
+      this.toggleButton.addEventListener('click', () => this.toggleTheme());
+    }
   }
 
   setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
+    document.body.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
     this.updateButton(theme);
   }
@@ -19,10 +22,6 @@ class DarkMode {
   toggleTheme() {
     this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
     this.setTheme(this.currentTheme);
-  }
-
-  updateButton(theme) {
-    this.toggleButton.textContent = theme === 'light' ? '🌙' : '☀️';
   }
 }
 
