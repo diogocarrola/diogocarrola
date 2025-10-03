@@ -1,11 +1,13 @@
 :root {
-    /* Spacing */
+    /* Enhanced Spacing Scale */
+    --space-xxs: 0.125rem;
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
     --space-lg: 1.5rem;
     --space-xl: 2rem;
     --space-xxl: 3rem;
+    --space-xxxl: 4rem;
 
     /* Typography */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -180,6 +182,204 @@ body {
     opacity: 0.7;
 }
 
+/* ===== IMPROVED CONTENT SECTIONS ===== */
+.content-section {
+    padding: var(--space-xl) var(--space-lg);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.material-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-xl);
+    margin: var(--space-lg) auto;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.material-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+/* Improved typography spacing */
+.material-card h2 {
+    margin-bottom: var(--space-md);
+    font-size: var(--font-size-xl);
+    color: var(--primary-color);
+    line-height: 1.3;
+}
+
+.material-card h3 {
+    margin-bottom: var(--space-md);
+    font-size: var(--font-size-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    line-height: 1.4;
+}
+
+.material-card h4 {
+    margin: var(--space-lg) 0 var(--space-md) 0;
+    font-size: var(--font-size-base);
+    color: var(--text-secondary);
+}
+
+.material-card p {
+    margin-bottom: var(--space-md);
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.material-card ul,
+.material-card ol {
+    margin: var(--space-md) 0 var(--space-lg) 0;
+    padding-left: var(--space-lg);
+}
+
+.material-card li {
+    margin-bottom: var(--space-sm);
+    line-height: 1.6;
+    padding-left: var(--space-xs);
+}
+
+.material-card li strong {
+    color: var(--primary-color);
+}
+
+/* Improved skills list */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin: var(--space-md) 0;
+}
+
+.skill-chip {
+    background: var(--primary-color);
+    color: var(--on-primary-color);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--border-radius-xl);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.skill-chip:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ===== IMPROVED HERO SECTION ===== */
+.hero-section {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--space-xxl) var(--space-lg);
+    position: relative;
+}
+
+.profile-container {
+    margin-bottom: var(--space-xl);
+}
+
+/* ===== FIX PROFILE IMAGE DISPLAY ===== */
+.profile-frame {
+    width: 200px;
+    height: 200px;
+    border-radius: var(--border-radius-round);
+    padding: 6px;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: var(--shadow-xl);
+    border: 3px solid var(--on-primary-color);
+    background: var(--primary-color);
+    overflow: hidden;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius-round);
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== PAGE-SPECIFIC ANIMATION CONTAINERS ===== */
+.binary-rain,
+.phoenix-fire,
+.construction-dust {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* ===== IMPROVED FOOTER ===== */
+.main-footer {
+    text-align: center;
+    padding: var(--space-xl) var(--space-lg);
+    background: var(--surface-color);
+    margin-top: var(--space-xxl);
+}
+
+.nav-footer {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin: 0 0 var(--space-lg) 0;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--border-radius-md);
+    transition: all var(--transition-fast);
+}
+
+.footer-link:hover,
+.footer-link.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* ===== STORY SECTION IMPROVEMENTS ===== */
+.story-section {
+    line-height: 1.6;
+}
+
+.story-section ul {
+    margin: var(--space-md) 0;
+    padding-left: var(--space-lg);
+}
+
+.story-section li {
+    margin-bottom: var(--space-sm);
+}
+
+blockquote {
+    background: var(--surface-color);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius-md);
+    margin: var(--space-lg) 0;
+    border-left: 4px solid var(--primary-color);
+    font-style: italic;
+    line-height: 1.6;
+}
+
 .hero-content h1 {
     font-size: var(--font-size-hero);
     font-weight: 700;
@@ -346,7 +546,66 @@ body {
     font-size: var(--font-size-sm);
 }
 
-/* Animations */
+/* ===== PROFILE FRAME ANIMATION ===== */
+.profile-frame {
+    animation: gentle-pulse 4s ease-in-out infinite;
+}
+
+.profile-frame:hover {
+    animation: gentle-pulse 2s ease-in-out infinite;
+}
+
+/* ===== SMOOTH SCROLL BEHAVIOR ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== LOADING STATES ===== */
+body.loading * {
+    transition: none !important;
+}
+
+/* ===== IMPROVED LIST STYLING ===== */
+.material-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.material-card ul li {
+    position: relative;
+    padding-left: var(--space-lg);
+}
+
+.material-card ul li::before {
+    content: '•';
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* ===== BETTER BUTTON SPACING ===== */
+.btn {
+    margin-top: var(--space-sm);
+}
+
+/* ===== IMPROVED BLOCKQUOTE ===== */
+blockquote {
+    position: relative;
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 3rem;
+    color: var(--primary-color);
+    opacity: 0.3;
+    position: absolute;
+    left: var(--space-md);
+    top: var(--space-sm);
+    line-height: 1;
+}
+
+/* ===== EXISTING ANIMATIONS ===== */
 .slide-in {
     opacity: 0;
     transform: translateY(30px);
@@ -410,36 +669,58 @@ body {
     }
 }
 
-/* Responsive Design */
+/* ===== RESPONSIVE IMPROVEMENTS ===== */
 @media (max-width: 768px) {
     .hero-section {
+        min-height: 60vh;
+        padding: var(--space-xl) var(--space-md);
+    }
+
+    .content-section {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    .material-card {
         padding: var(--space-lg);
+        margin: var(--space-md) auto;
     }
-    
+
+    .material-card h2 {
+        font-size: var(--font-size-lg);
+    }
+
+    .material-card h3 {
+        font-size: var(--font-size-base);
+    }
+
     .profile-frame {
-        width: 180px;
-        height: 180px;
+        width: 160px;
+        height: 160px;
     }
-    
+
+    .nav-footer {
+        gap: var(--space-md);
+    }
+
     .hero-content h1 {
         font-size: var(--font-size-xxl);
     }
-    
+
     .button-group {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .btn {
         width: 220px;
         justify-content: center;
     }
-    
+
     .persona-nav {
         grid-template-columns: 1fr;
         gap: var(--space-md);
     }
-    
+
     .header-controls {
         top: var(--space-sm);
         right: var(--space-sm);
@@ -447,19 +728,51 @@ body {
 }
 
 @media (max-width: 480px) {
+    .hero-section {
+        min-height: 50vh;
+        padding: var(--space-lg) var(--space-sm);
+    }
+
+    .content-section {
+        padding: var(--space-md) var(--space-sm);
+    }
+
+    .material-card {
+        padding: var(--space-md);
+        margin: var(--space-sm) auto;
+    }
+
+    .profile-frame {
+        width: 140px;
+        height: 140px;
+    }
+
+    .nav-footer {
+        gap: var(--space-sm);
+    }
+
+    .footer-link {
+        padding: var(--space-xs) var(--space-sm);
+        font-size: var(--font-size-sm);
+    }
+
+    .skills-list {
+        gap: var(--space-xs);
+    }
+
+    .skill-chip {
+        padding: var(--space-xxs) var(--space-sm);
+        font-size: 0.8rem;
+    }
+
     .hero-content h1 {
         font-size: var(--font-size-xl);
     }
-    
-    .profile-frame {
-        width: 150px;
-        height: 150px;
-    }
-    
+
     .nav-card {
         padding: var(--space-lg);
     }
-    
+
     .social-links {
         flex-direction: column;
         gap: var(--space-md);
