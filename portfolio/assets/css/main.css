@@ -47,6 +47,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Add smooth transitions for theme changes */
+:root {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 body {
     font-family: var(--font-family);
     line-height: 1.6;
@@ -137,7 +142,7 @@ body {
     margin: 0 auto;
     box-shadow: var(--shadow-xl);
     border: 4px solid var(--on-primary-color);
-    animation: gentle-pulse 4s ease-in-out infinite;
+    animation: none;
 }
 
 .profile-image {
@@ -153,34 +158,12 @@ body {
 }
 
 .profile-frame:hover {
-    animation: gentle-pulse 2s ease-in-out infinite;
+    animation: none;
 }
 
-@keyframes gentle-pulse {
-    0%, 100% {
-        transform: scale(1);
-        box-shadow: var(--shadow-xl);
-    }
-    50% {
-        transform: scale(1.02);
-        box-shadow: 0 12px 40px rgba(0,0,0,0.2);
-    }
-}
 
-/* Mountain Decoration */
-.mountain-decoration {
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120%;
-    height: 30px;
-    background: linear-gradient(45deg, transparent 30%, var(--primary-color) 30%, var(--primary-color) 70%, transparent 70%),
-                linear-gradient(-45deg, transparent 30%, var(--primary-color) 30%, var(--primary-color) 70%, transparent 70%);
-    background-size: 40px 30px;
-    background-repeat: repeat-x;
-    opacity: 0.7;
-}
+
+
 
 /* ===== IMPROVED CONTENT SECTIONS ===== */
 .content-section {
@@ -402,9 +385,25 @@ blockquote {
     font-weight: 600;
 }
 
-.developer-text { color: #4285F4; }
-.scout-text { color: #EA4335; }
-.builder-text { color: #34A853; }
+.developer-text {
+    color: #1a365d; /* Dark blue for developer */
+    font-weight: 700;
+}
+
+.scout-text {
+    color: #EA4335; /* Keep scout red */
+    font-weight: 700;
+}
+
+.builder-text {
+    color: #d69e2e; /* New golden yellow for builder */
+    font-weight: 700;
+}
+
+/* For dark mode support */
+[data-theme="dark"] .developer-text { color: #90cdf4; }
+[data-theme="dark"] .scout-text { color: #f28b82; }
+[data-theme="dark"] .builder-text { color: #faf089; }
 
 /* Buttons */
 .button-group {
@@ -548,11 +547,11 @@ blockquote {
 
 /* ===== PROFILE FRAME ANIMATION ===== */
 .profile-frame {
-    animation: gentle-pulse 4s ease-in-out infinite;
+    animation: none;
 }
 
 .profile-frame:hover {
-    animation: gentle-pulse 2s ease-in-out infinite;
+    animation: none;
 }
 
 /* ===== SMOOTH SCROLL BEHAVIOR ===== */
