@@ -78,6 +78,10 @@ body {
     backdrop-filter: blur(10px);
 }
 
+[data-theme="light"] .language-switcher {
+    background: rgba(0, 0, 0, 0.1);
+}
+
 .lang-btn {
     background: transparent;
     border: none;
@@ -105,6 +109,10 @@ body {
     cursor: pointer;
     transition: all var(--transition-normal);
     backdrop-filter: blur(10px);
+}
+
+[data-theme="light"] .theme-toggle {
+    background: rgba(0, 0, 0, 0.1);
 }
 
 .theme-toggle::before {
@@ -571,16 +579,7 @@ blockquote {
     position: relative;
 }
 
-blockquote::before {
-    content: '"';
-    font-size: 3rem;
-    color: var(--primary-color);
-    opacity: 0.3;
-    position: absolute;
-    left: var(--space-md);
-    top: var(--space-sm);
-    line-height: 1;
-}
+
 
 /* Animations */
 .slide-in {
