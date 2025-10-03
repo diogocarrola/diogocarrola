@@ -30,7 +30,7 @@
     --on-surface-color: #002147;
 }
 
-.page-home[data-theme="dark"] {
+[data-theme="dark"] .page-home {
     --primary-color: #90CAF9;
     --secondary-color: #4285F4;
     --on-primary-color: #002147;
@@ -47,7 +47,7 @@
     --on-surface-color: #1a365d;
 }
 
-.page-developer[data-theme="dark"] {
+[data-theme="dark"] .page-developer {
     --primary-color: #90cdf4;    /* Light blue for dark mode */
     --secondary-color: #63b3ed;
     --on-primary-color: #1a202c;
@@ -64,7 +64,7 @@
     --on-surface-color: #EA4335;
 }
 
-.page-scout[data-theme="dark"] {
+[data-theme="dark"] .page-scout {
     --primary-color: #f28b82;  /* Light red for dark mode */
     --secondary-color: #FBBC04;
     --on-primary-color: #FFFFFF;
@@ -81,7 +81,7 @@
     --on-surface-color: #d69e2e;
 }
 
-.page-builder[data-theme="dark"] {
+[data-theme="dark"] .page-builder {
     --primary-color: #faf089;   /* Light golden yellow for dark mode */
     --secondary-color: #d69e2e;
     --on-primary-color: #1a202c;
