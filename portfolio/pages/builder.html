@@ -10,104 +10,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/themes.css">
-    <style>
-        .construction-dust {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-            pointer-events: none;
-            border-radius: 50%;
-            overflow: hidden;
-        }
-        
-        .dust-particle {
-            position: absolute;
-            border-radius: 50%;
-            background: radial-gradient(circle, #8B4513, #A0522D, #CD853F);
-            opacity: 0;
-        }
-        
-        .content-section {
-            padding: var(--space-xl);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .nav-footer {
-            display: flex;
-            justify-content: center;
-            gap: var(--space-lg);
-            margin: var(--space-xxl) 0 var(--space-lg);
-            flex-wrap: wrap;
-        }
-        
-        .footer-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            padding: var(--space-sm) var(--space-md);
-            border-radius: var(--border-radius-md);
-            transition: all var(--transition-fast);
-        }
-        
-        .footer-link:hover,
-        .footer-link.active {
-            background: var(--primary-color);
-            color: white;
-        }
-        
-        .story-section { 
-            line-height: 1.6; 
-        }
-        
-        .story-section ul {
-            margin: var(--space-md) 0;
-            padding-left: var(--space-lg);
-        }
-        
-        .story-section li {
-            margin-bottom: var(--space-sm);
-        }
-        
-        blockquote {
-            background: var(--surface-color);
-            padding: var(--space-lg);
-            border-radius: var(--border-radius-md);
-            margin: var(--space-lg) 0;
-            border-left: 4px solid var(--primary-color);
-            font-style: italic;
-        }
-        
-        /* Profile frame for builder page */
-        .profile-frame {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            padding: 8px;
-            position: relative;
-            margin: 0 auto;
-            box-shadow: var(--shadow-xl);
-            border: 4px solid var(--on-primary-color);
-            background: var(--primary-color);
-        }
-        
-        @media (max-width: 768px) {
-            .profile-frame {
-                width: 180px;
-                height: 180px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .profile-frame {
-                width: 150px;
-                height: 150px;
-            }
-        }
-    </style>
 </head>
 <body class="page-builder" data-theme="light">
     <!-- Header Controls -->
@@ -116,7 +18,7 @@
             <button class="lang-btn active" data-lang="en">EN</button>
             <button class="lang-btn" data-lang="pt">PT</button>
         </div>
-        <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="theme-toggle" aria-label="Toggle dark mode"></button>
     </div>
     <!-- Main Hero Section -->
     <main class="hero-section">
@@ -127,15 +29,15 @@
                 <div class="construction-dust" id="constructionDust"></div>
             </div>
         </div>
-        
-        <!-- Hero Content - Keeping your exact text -->
+
+        <!-- Hero Content with fade-in animation -->
         <div class="hero-content">
             <h1 class="slide-in-from-top">Diogo Builder</h1>
             <p class="slide-in-from-bottom">DIY & Creative Problem-Solver</p>
         </div>
     </main>
 
-    <!-- Content Sections - Keeping your exact content -->
+    <!-- Content Sections -->
     <section class="content-section">
         <div class="material-card slide-in">
             <h2>Hands-On Creator 🛠️</h2>
@@ -144,7 +46,7 @@
             </p>
         </div>
 
-        <div class="material-card slide-in story-section">
+        <div class="material-card slide-in">
             <h3><span class="material-icons">home_repair_service</span>The Home Renovation Challenge</h3>
             <p>Together with my brother, we took on the challenge of completely renovating a house with zero prior construction experience. Our goal: transform an old space into a modern, functional home using only our determination and willingness to learn by doing.</p>
             
