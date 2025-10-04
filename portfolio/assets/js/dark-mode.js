@@ -16,12 +16,30 @@ class DarkMode {
     document.documentElement.setAttribute('data-theme', theme);
     document.body.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-    this.updateButton(theme);
+    this.currentTheme = theme;
+
+    // Update meta theme-color for mobile browsers
+    this.updateMetaThemeColor(theme);
   }
 
   toggleTheme() {
-    this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
-    this.setTheme(this.currentTheme);
+    const newTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+    this.setTheme(newTheme);
+  }
+
+  updateMetaThemeColor(theme) {
+    let metaThemeColor = document.querySelector("meta[name=theme-color]");
+    if (!metaThemeColor) {
+      metaThemeColor = document.createElement('meta');
+      metaThemeColor.name = 'theme-color';
+      document.head.appendChild(metaThemeColor);
+    }
+
+    if (theme === 'dark') {
+      metaThemeColor.content = '#121212';
+    } else {
+      metaThemeColor.content = '#ffffff';
+    }
   }
 }
 

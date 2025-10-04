@@ -15,12 +15,18 @@
     --surface-color: #1E1E1E;
     --card-bg: #2D2D2D;
     --text-primary: #FFFFFF;
-    --text-secondary: #9AA0A6;
+    --text-secondary: #B0B0B0;
     --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
-[data-theme="dark"] body {
+/* Apply background color to html and body */
+html {
     background-color: var(--background-color);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-primary);
 }
 
 /* Page-Specific Themes */
