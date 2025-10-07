@@ -200,6 +200,11 @@ body {
     transition: transform var(--transition-normal);
 }
 
+.page-developer .profile-image,
+.page-home .profile-image {
+    object-position: 50% 25%;
+}
+
 .profile-frame:hover .profile-image {
     transform: scale(1.05);
 }
