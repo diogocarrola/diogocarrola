@@ -806,3 +806,14 @@ blockquote {
         transform: translateX(27px);
     }
 }
+
+/* Disable CV and translate buttons */
+.btn[download], .language-switcher {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.btn[download]:hover, .language-switcher:hover {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
