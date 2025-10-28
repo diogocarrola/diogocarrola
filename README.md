@@ -30,19 +30,6 @@ I'm **Diogo**, a 22-year-old self-taught **Software Developer** from **Portugal*
   </sub>
 </p>
 
-### 🕹️ My GitHub Contributions as PAC-MAN
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/pacman-contributions-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/pacman-contributions.svg">
-    <img src="assets/pacman-contributions.svg" alt="PAC-MAN showing my GitHub contributions" width="800">
-  </picture>
-  <br>
-  <sub>
-    Generated with <a href="https://github.com/abozanona/pacman-contribution-graph">abozanona/pacman-contribution-graph</a>
-  </sub>
-</p>
-
 ### 🌟 Who I Am
 - 🏕️ A **Scout** at heart, always ready for new adventures and teamwork.
 - 💡 **Spontaneous** and curious, I thrive on solving problems and creating something out of nothing.
