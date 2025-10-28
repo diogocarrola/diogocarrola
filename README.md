@@ -14,7 +14,7 @@ I'm **Diogo**, a 22-year-old self-taught **Software Developer** from **Portugal*
 ### 🛠️ My Skills
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=bash,c,cpp,py,dotnet,js,html,css,d3,react,redux,nodejs,flutter,alpine,flask,sass,bootstrap,tailwind,materialui,figma,mysql,firebase,gcp,docker,kubernetes,netlify,git,github,githubactions,postman" />
+    <img src="https://skillicons.dev/icons?i=bash,c,cpp,py,dotnet,js,html,css,d3,react,redux,nodejs,flutter,alpinejs,flask,sass,bootstrap,tailwind,materialui,figma,mysql,firebase,gcp,docker,kubernetes,netlify,git,github,githubactions,postman" />
   </a>
 </p>
 
