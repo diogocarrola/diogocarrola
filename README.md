@@ -4,7 +4,7 @@
 
 ## Hello, World! 🌍
 
-I'm **Diogo**, a 22-year-old self-taught **Software Developer** from **Portugal**. Passionate about **web development**, **AI** and **IoT**, I'm on a mission to create meaningful solutions that make the world a better place. 🌱
+I'm **Diogo**, a 23-year-old self-taught **Software Developer** from **Portugal**. Passionate about **web development**, **AI** and **IoT**, I'm on a mission to create meaningful solutions that make the world a better place. 🌱
 
 ### 🚀 What I'm Up To
 - 🌐 Building my **first Progressive Web App (PWA)** from scratch, designed to impact over **7,000 users**.
